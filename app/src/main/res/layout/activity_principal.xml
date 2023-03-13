@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Principal">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="413dp"
+        android:layout_height="192dp"
+        app:srcCompat="@drawable/grupo1"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="-7dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_detalles"
+        android:layout_width="167dp"
+        android:layout_height="57dp"
+        android:backgroundTint="#E35B6F"
+        android:text="Detalles"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="557dp" />
+
+    <Button
+        android:id="@+id/btn_globos"
+        android:layout_width="167dp"
+        android:layout_height="57dp"
+        android:backgroundTint="#E35B6F"
+        android:text="Globos"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <Button
+        android:id="@+id/btn_peluches"
+        android:layout_width="167dp"
+        android:layout_height="57dp"
+        android:backgroundTint="#E35B6F"
+        android:text="Peluches"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="400dp" />
+
+    <Button
+        android:id="@+id/btn_regalos"
+        android:layout_width="167dp"
+        android:layout_height="57dp"
+        android:backgroundTint="#E35B6F"
+        android:text="Regalos"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="318dp" />
+
+    <Button
+        android:id="@+id/btn_tazas"
+        android:layout_width="167dp"
+        android:layout_height="57dp"
+        android:backgroundTint="#E35B6F"
+        android:text="Tazas"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="232dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
