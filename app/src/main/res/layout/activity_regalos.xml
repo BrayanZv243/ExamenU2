@@ -24,6 +24,8 @@
         android:id="@+id/myGrid"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:verticalSpacing="50dp"
+        android:horizontalSpacing="50dp"
         android:numColumns="3">
 
 

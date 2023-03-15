@@ -100,7 +100,7 @@ class Regalos : AppCompatActivity() {
         override fun getView(position: Int, converView: View?, parent: ViewGroup?): View {
             var regalo = regalos[position]
             var inflador = LayoutInflater.from(context)
-            var vista = inflador.inflate(R.layout.activity_regalos,null)
+            var vista = inflador.inflate(R.layout.activity_detalle_regalos,null)
 
             var imagen = vista.findViewById(R.id.iv_regalo_imagen) as ImageView
             var titulo = vista.findViewById(R.id.tv_regalo_precio) as TextView
