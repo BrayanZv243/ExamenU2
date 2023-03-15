@@ -16,25 +16,13 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/tv_regalo_nombre"
-        android:layout_width="122dp"
-        android:layout_height="52dp"
-        android:text="titulo"
-        android:textColor="#E35B6F"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="287dp"
-        android:textSize="25sp"
-        />
-
-    <TextView
         android:id="@+id/tv_regalo_precio"
         android:layout_width="83dp"
         android:layout_height="52dp"
         android:text="$0.00"
         android:textColor="#E35B6F"
+        android:textSize="25sp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="263dp"
-        tools:layout_editor_absoluteY="287dp"
-        android:textSize="25sp"/>
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="276dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

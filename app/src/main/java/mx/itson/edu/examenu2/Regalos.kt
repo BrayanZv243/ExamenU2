@@ -2,6 +2,7 @@ package mx.itson.edu.examenu2
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,16 +11,12 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.GridView
 import android.widget.ImageView
+import android.widget.TextView
 
 class Regalos : AppCompatActivity() {
     var adapter: RegalosAdapter? = null
     var myRegalos = ArrayList<Detalles>()
 
-    var detalles: String = "250"
-    var globos: String = "300"
-    var peluches: String = "200"
-    var regalos: String = "150"
-    var tazas: String = "200"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,27 +32,56 @@ class Regalos : AppCompatActivity() {
     fun cargarRegalos(option:String?) {
         when (option) {
             "Detalles" -> {
-                myRegalos.add(Detalles(R.drawable.cumplebotanas,"Detalles",detalles))
-                myRegalos.add(Detalles(R.drawable.cumplecheve,"Detalles",detalles))
-                myRegalos.add(Detalles(R.drawable.cumpleescolar,"Detalles",detalles))
-                myRegalos.add(Detalles(R.drawable.cumplepaletas,"Detalles",detalles))
-                myRegalos.add(Detalles(R.drawable.cumplesnack,"Detalles",detalles))
-                myRegalos.add(Detalles(R.drawable.cumplevinos,"Detalles",detalles))
+                myRegalos.add(Detalles(R.drawable.cumplebotanas,"280"))
+                myRegalos.add(Detalles(R.drawable.cumplecheve,"320"))
+                myRegalos.add(Detalles(R.drawable.cumpleescolar,"330"))
+                myRegalos.add(Detalles(R.drawable.cumplepaletas,"190"))
+                myRegalos.add(Detalles(R.drawable.cumplesnack,"150"))
+                myRegalos.add(Detalles(R.drawable.cumplevinos,"370"))
             }
 
             "Globos" -> {
+                myRegalos.add(Detalles(R.drawable.globoamor,"240"))
+                myRegalos.add(Detalles(R.drawable.globocumple,"820"))
+                myRegalos.add(Detalles(R.drawable.globofestejo,"260"))
+                myRegalos.add(Detalles(R.drawable.globonum,"760"))
+                myRegalos.add(Detalles(R.drawable.globoregalo,"450"))
+            }
 
+            "Peluches" -> {
+                myRegalos.add(Detalles(R.drawable.peluchemario,"320"))
+                myRegalos.add(Detalles(R.drawable.pelucheminecraft,"320"))
+                myRegalos.add(Detalles(R.drawable.peluchepeppa,"290"))
+                myRegalos.add(Detalles(R.drawable.peluchesony,"330"))
+                myRegalos.add(Detalles(R.drawable.peluchestich,"195"))
+                myRegalos.add(Detalles(R.drawable.peluchevarios,"225"))
+            }
+
+            "Tazas" -> {
+                myRegalos.add(Detalles(R.drawable.tazaabuela,"120"))
+                myRegalos.add(Detalles(R.drawable.tazalove,"120"))
+                myRegalos.add(Detalles(R.drawable.tazaquiero,"280"))
+                myRegalos.add(Detalles(R.drawable.tazas,"330"))
+            }
+
+            "Regalos" -> {
+                myRegalos.add(Detalles(R.drawable.regaloazul,"80"))
+                myRegalos.add(Detalles(R.drawable.regalobebe,"290"))
+                myRegalos.add(Detalles(R.drawable.regalocajas,"140"))
+                myRegalos.add(Detalles(R.drawable.regaloazul,"85"))
+                myRegalos.add(Detalles(R.drawable.regalocolores,"75"))
+                myRegalos.add(Detalles(R.drawable.regalovarios,"85"))
             }
         }
     }
 
     class RegalosAdapter: BaseAdapter{
         var regalos = ArrayList<Detalles>()
-        var contexto: Context? = null
+        var context: Context? = null
 
         constructor(context: Context, regalos: ArrayList<Detalles>){
             this.regalos = regalos
-            this.contexto = context
+            this.context = context
         }
 
         override fun getCount(): Int {
@@ -71,12 +97,17 @@ class Regalos : AppCompatActivity() {
         }
 
         @SuppressLint("MissingInflatedId")
-        override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
-            var regalo = regalos[p0]
-            var inflador = LayoutInflater.from(contexto)
+        override fun getView(position: Int, converView: View?, parent: ViewGroup?): View {
+            var regalo = regalos[position]
+            var inflador = LayoutInflater.from(context)
             var vista = inflador.inflate(R.layout.activity_regalos,null)
 
             var imagen = vista.findViewById(R.id.iv_regalo_imagen) as ImageView
+            var titulo = vista.findViewById(R.id.tv_regalo_precio) as TextView
+
+            imagen.setImageResource(regalo.Image)
+            titulo.setText(regalo.precio)
+
 
 
             return vista
