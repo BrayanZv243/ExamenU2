@@ -108,8 +108,6 @@ class Regalos : AppCompatActivity() {
             imagen.setImageResource(regalo.Image)
             titulo.setText(regalo.precio)
 
-
-
             return vista
         }
 
